@@ -1,0 +1,94 @@
+/* ============ WORKS — RESPONSIVE GRID ============ */
+.works {
+  padding: 8rem 2rem;
+  background: #f5f2ea;
+}
+.works-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.works-headline {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.02em;
+}
+
+/* Desktop: responsive grid */
+.works-track {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.work-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.work-card-number {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #F4D758, #F7A946);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.work-card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+.work-card-platform {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 400;
+}
+
+/* Mobile: horizontal scroll with hint */
+@media (max-width: 768px) {
+  .works-track {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 1rem 2rem;
+    position: relative;
+  }
+  .works-track::-webkit-scrollbar { display: none; }
+  .works-track::after {
+    content: '← 滑动查看更多 →';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: #999;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+  }
+  .work-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+}
