@@ -1,0 +1,93 @@
+/* ============ OPINIONS — FULLSCREEN SCROLL ============ */
+.opinions-section {
+  position: relative;
+}
+.opinion-slide {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.opinion-slide:nth-child(1) { background: #F4D758; }
+.opinion-slide:nth-child(2) { background: #2B7FD8; color: #fff; }
+.opinion-slide:nth-child(3) { background: #fefcf6; }
+
+.opinion-number {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: clamp(6rem, 20vw, 16rem);
+  opacity: 0.06;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  pointer-events: none;
+}
+.opinion-slide:nth-child(2) .opinion-number { opacity: 0.08; color: #fff; }
+
+.opinion-text {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 5.5vw, 3.8rem);
+  max-width: 800px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #1a1a1a;
+}
+.opinion-slide:nth-child(2) .opinion-text {
+  color: #fff;
+}
+.opinion-deco {
+  font-family: 'Caveat', cursive;
+  font-size: 1rem;
+  opacity: 0.5;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+  color: rgba(26,26,26,0.5);
+}
+.opinion-slide:nth-child(2) .opinion-deco {
+  color: rgba(255,255,255,0.5);
+}
+.opinion-text.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+.opinion-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+.opinion-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(26,26,26,0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+.opinion-dot.is-active {
+  background: #1a1a1a;
+  width: 24px;
+  border-radius: 4px;
+}
+.opinion-slide:nth-child(2) .opinion-dot { background: rgba(255,255,255,0.3); }
+.opinion-slide:nth-child(2) .opinion-dot.is-active { background: #fff; }
