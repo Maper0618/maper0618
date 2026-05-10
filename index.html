@@ -16,9 +16,11 @@
 <meta name="description" content="Maper0618 的数字垃圾场。这里存放着一个人类试图用代码理解世界的失败尝试。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Caveat:wght@400;600&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/index-ldYyjQ65.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BIVyx2LU.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Caveat:wght@400;600&family=Inter:wght@300;400;600;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Caveat:wght@400;600&family=Inter:wght@300;400;600;800;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Caveat:wght@400;600&family=Inter:wght@300;400;600;800;900&display=swap"></noscript>
+  <script type="module" crossorigin src="./assets/index-DQw4XddD.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BTEc66Qj.css">
 </head>
 <body>
 
@@ -44,6 +46,7 @@
 <!-- Cursor glow -->
 <div class="cursor-glow" id="cursorGlow"></div>
 
+<main>
 <!-- ==================== HERO — TERMINAL ==================== -->
 <section class="hero">
   <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
@@ -77,7 +80,7 @@
 <!-- ==================== OPINIONS ==================== -->
 <section class="opinions-section" id="opinionsSection">
   <div class="opinion-slide" data-opinion>
-    <div class="opinion-number">01</div>
+    <div class="opinion-number" aria-hidden="true">01</div>
     <p class="opinion-text">最会用AI的<br>是最会提需求的人，俗称"甲方"</p>
     <span class="opinion-deco">— 我的废话文学</span>
   </div>
@@ -169,7 +172,7 @@
 <section class="contact" id="contactSection">
   <div class="contact-inner">
     <div class="contact-headline-wrap">
-      <span class="online-indicator" aria-label="在线" title="这个人现在可能正在写bug"></span>
+      <span class="online-indicator" role="img" aria-label="在线" title="这个人现在可能正在写bug"></span>
       <h2 class="contact-headline fade-up no-margin">来都来了</h2>
     </div>
     <p class="contact-sub fade-up">我不咬人，但我的AI可能会自动回复你 🤖</p>
@@ -180,6 +183,7 @@
     <p class="contact-quote fade-up">"代码写得好，bug少不了。"<br>— 某位凌晨3点还在debug的 anonymous</p>
   </div>
 </section>
+</main>
 
 <footer class="footer">
   <p id="footerSlogan">© 2026 Maper0618 · 用咖啡因和Ctrl+S搭建 · 如有bug，那是feature</p>
