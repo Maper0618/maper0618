@@ -1,0 +1,190 @@
+
+@font-face {
+  font-family: 'Huiwen Mincho';
+  src: url('/HuiwenMincho-subset.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/* ============ THEME VARIABLES ============ */
+:root {
+  --bg-primary: #fefcf6;
+  --bg-secondary: #f5f2ea;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #999;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #e8e6e3;
+    --text-secondary: #b0aba4;
+    --text-muted: #777;
+  }
+}
+
+/* ============ RESET & BASE ============ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+body {
+  font-family: 'Noto Sans SC', 'Inter', sans-serif;
+  padding-top: 0;
+  color: #1a1a1a;
+  background: #fefcf6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #F4D758; color: #1a1a1a; }
+
+
+
+/* ============ SECTION COMMON ============ */
+section { position: relative; }
+.section-label {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 3rem;
+}
+
+
+
+/* ============ PARALLAX DECORATION ============ */
+.parallax-dot {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .project-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .project-card { min-height: 320px; padding: 2rem; }
+  .journey-timeline::before { left: 8px; }
+  .timeline-item { width: 100%; left: 0 !important; padding-left: 2.5rem; padding-right: 0; text-align: left !important; }
+  .timeline-item::before { left: 0 !important; right: auto !important; }
+  .timeline-item--left .timeline-chats { align-items: flex-start; }
+  .opinion-text { font-family: 'Huiwen Mincho', 'Noto Serif SC', serif; font-size: clamp(1.5rem, 6vw, 2.5rem); }
+  .work-card { flex: 0 0 280px; }
+  .contact-links { gap: 1.5rem; }
+  .terminal-window { border-radius: 8px; }
+  .terminal-body { padding: 1.2rem 1rem 2rem; font-size: 0.8rem; min-height: 280px; }
+  .terminal-header-title { display: none; }
+}
+
+
+/* ============ ANIMATIONS ============ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up-delay-1 { transition-delay: 0.1s; }
+.fade-up-delay-2 { transition-delay: 0.2s; }
+.fade-up-delay-3 { transition-delay: 0.3s; }
+
+
+
+/* ============ DARK MODE ============ */
+html.dark body {
+  background: #121212;
+  color: #e8e6e3;
+}
+html.dark .site-nav {
+  background: rgba(18,18,18,0.85);
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+html.dark .nav-logo,
+html.dark .nav-link:hover,
+html.dark .nav-link.is-active {
+  color: #e8e6e3;
+}
+html.dark .nav-link {
+  color: #999;
+}
+html.dark .theme-toggle:hover {
+  background: rgba(255,255,255,0.08);
+}
+html.dark .journey-section,
+html.dark .projects {
+  background: #121212;
+}
+html.dark .journey-headline {
+  color: #e8e6e3;
+}
+html.dark .jchat-name {
+  color: rgba(255,255,255,0.6);
+}
+html.dark .timeline-era {
+  color: #888;
+}
+html.dark .timeline-item::before {
+  background: #121212;
+}
+html.dark .jchat-name {
+  color: rgba(255,255,255,0.6);
+}
+html.dark .section-label {
+  color: #666;
+}
+html.dark .works {
+  background: #1a1a1a;
+}
+html.dark .work-card {
+  background: #1e1e1e;
+}
+html.dark .work-card-title,
+html.dark .work-card-platform {
+  color: #e8e6e3;
+}
+html.dark .works-headline {
+  color: #e8e6e3;
+}
+html.dark .work-card-platform {
+  color: #888;
+}
+html.dark .projects-headline {
+  color: #e8e6e3;
+}
+html.dark .works-scroll-hint {
+  color: #555;
+}
+html.dark ::selection {
+  background: #F4D758;
+  color: #1a1a1a;
+}
+html.dark .opinion-slide:nth-child(3) {
+  background: #1e1e1e;
+}
+html.dark .opinion-slide:nth-child(3) .opinion-text {
+  color: #e8e6e3;
+}
+html.dark .opinion-slide:nth-child(3) .opinion-deco {
+  color: rgba(255,255,255,0.4);
+}
+
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .terminal-cursor { animation: none; opacity: 0.5; }
+  .cursor-glow { display: none; }
+  .fade-up, .timeline-item, .opinion-text { transition: none; }
+  .hero-scroll { animation: none; opacity: 0.8; }
+  .jchat { animation: none; opacity: 1; transform: none; }
+  @keyframes scrollPulse { 0%,100% { transform: scaleY(1); opacity: 0.3; } }
+  @keyframes cursorBlink { 0%,100% { opacity: 0.5; } }
+}
