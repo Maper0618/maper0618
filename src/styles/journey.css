@@ -1,0 +1,168 @@
+/* ============ JOURNEY — VERTICAL TIMELINE ============ */
+.journey-section {
+  padding: 8rem 2rem;
+  background: #fefcf6;
+}
+.journey-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.journey-headline {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #1a1a1a;
+}
+.journey-headline em {
+  font-style: normal;
+  color: #2B7FD8;
+}
+
+/* Timeline container */
+.journey-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+.journey-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #F4D758, #2B7FD8, #F7A946);
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 2rem 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-item--left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item--right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Timeline dot on the center line */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #F4D758;
+  background: #fefcf6;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.timeline-item--left::before {
+  right: -8px;
+}
+.timeline-item--right::before {
+  left: -8px;
+}
+.timeline-item:nth-child(2)::before { border-color: #2B7FD8; }
+.timeline-item:nth-child(3)::before { border-color: #F7A946; }
+.timeline-item:nth-child(4)::before { border-color: #1a1a1a; }
+
+.timeline-item.is-visible::before {
+  background: #F4D758;
+  box-shadow: 0 0 0 6px rgba(244,215,88,0.2);
+}
+.timeline-item:nth-child(2).is-visible::before { background: #2B7FD8; box-shadow: 0 0 0 6px rgba(43,127,216,0.2); }
+.timeline-item:nth-child(3).is-visible::before { background: #F7A946; box-shadow: 0 0 0 6px rgba(247,169,70,0.2); }
+.timeline-item:nth-child(4).is-visible::before { background: #1a1a1a; box-shadow: 0 0 0 6px rgba(26,26,26,0.15); }
+
+/* Era label */
+.timeline-era {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+/* Chat bubbles in timeline */
+.timeline-chats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.timeline-item--left .timeline-chats {
+  align-items: flex-end;
+}
+.timeline-item--right .timeline-chats {
+  align-items: flex-start;
+}
+
+.jchat {
+  max-width: 90%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  position: relative;
+}
+.jchat--other {
+  background: #2B7FD8;
+  color: #fff;
+  border-bottom-left-radius: 4px;
+}
+.jchat--me {
+  background: #F4D758;
+  color: #1a1a1a;
+  border-bottom-right-radius: 4px;
+}
+.jchat-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.05em;
+}
+.jchat--me .jchat-name {
+  text-align: right;
+}
+.jchat-msg {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .journey-timeline::before {
+    left: 8px;
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    text-align: left !important;
+  }
+  .timeline-item::before {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .timeline-item--left .timeline-chats {
+    align-items: flex-start;
+  }
+  .jchat {
+    max-width: 95%;
+  }
+}
