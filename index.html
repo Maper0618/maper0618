@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d1117">
+<meta name="author" content="Maper0618">
+<meta property="og:title" content="Maper0618 · 一个还在加载中的人类">
+<meta property="og:description" content="Maper0618 的数字垃圾场。这里存放着一个人类试图用代码理解世界的失败尝试。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maper0618 · 一个还在加载中的人类">
+<meta name="twitter:description" content="Maper0618 的数字垃圾场。这里存放着一个人类试图用代码理解世界的失败尝试。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫧</text></svg>">
+<title>Maper0618 · 一个还在加载中的人类</title>
+<meta name="description" content="Maper0618 的数字垃圾场。这里存放着一个人类试图用代码理解世界的失败尝试。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Caveat:wght@400;600&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-ldYyjQ65.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BIVyx2LU.css">
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Skip to content for keyboard users -->
+<a href="#aboutSection" id="skipLink">跳过动画，直接看内容</a>
+
+<!-- Fixed Navigation -->
+<nav class="site-nav" id="siteNav" aria-label="主导航">
+  <a href="#" class="nav-logo" aria-label="回到顶部">Maper0618</a>
+  <div class="nav-links">
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">🌙</button>
+    <a href="#aboutSection" class="nav-link">黑历史</a>
+    <a href="#opinionsSection" class="nav-link">废话</a>
+    <a href="#projectsSection" class="nav-link">捣鼓</a>
+    <a href="#worksSection" class="nav-link">粮仓</a>
+    <a href="#contactSection" class="nav-link">来都来了</a>
+  </div>
+</nav>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ==================== HERO — TERMINAL ==================== -->
+<section class="hero">
+  <canvas class="starfield" id="starfield" aria-hidden="true"></canvas>
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <div class="terminal-dot terminal-dot--red"></div>
+      <div class="terminal-dot terminal-dot--yellow"></div>
+      <div class="terminal-dot terminal-dot--green"></div>
+      <div class="terminal-header-title">mapper0618@地球Online ~ %</div>
+      <button class="terminal-sound-toggle" id="terminalSoundToggle" aria-label="开关打字音效" title="打字音效">🔇</button>
+    </div>
+    <div class="terminal-body" id="terminalBody"></div>
+  </div>
+  <div class="hero-scroll">
+    <span>往下翻，有瓜</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ==================== JOURNEY — CHAT INTERVIEW ==================== -->
+<section class="journey-section" id="aboutSection">
+  <div class="journey-inner">
+    <p class="section-label fade-up">My Journey</p>
+    <h2 class="journey-headline fade-up">我的人生轨迹：一条<em>布朗运动</em>曲线</h2>
+    <div class="journey-timeline fade-up">
+      <!-- Timeline items injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OPINIONS ==================== -->
+<section class="opinions-section" id="opinionsSection">
+  <div class="opinion-slide" data-opinion>
+    <div class="opinion-number">01</div>
+    <p class="opinion-text">最会用AI的<br>是最会提需求的人，俗称"甲方"</p>
+    <span class="opinion-deco">— 我的废话文学</span>
+  </div>
+  <div class="opinion-slide" data-opinion style="display:none;">
+    <div class="opinion-number">02</div>
+    <p class="opinion-text">代码能跑就不要动<br>动了可能就不跑了</p>
+    <span class="opinion-deco">— 凌晨3点的顿悟</span>
+  </div>
+  <div class="opinion-slide" data-opinion style="display:none;">
+    <div class="opinion-number">03</div>
+    <p class="opinion-text">Bug是程序员的勋章<br>没有Bug说明写得不够多</p>
+    <span class="opinion-deco">— 自我安慰指南</span>
+  </div>
+  <div class="opinion-dots">
+    <button class="opinion-dot is-active" aria-label="第1条"></button>
+    <button class="opinion-dot" aria-label="第2条"></button>
+    <button class="opinion-dot" aria-label="第3条"></button>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS ==================== -->
+<section class="projects" id="projectsSection">
+  <div class="projects-inner">
+    <p class="section-label fade-up">我在捣鼓啥</p>
+    <h2 class="projects-headline fade-up">两件还没放弃的事</h2>
+    <div class="project-grid">
+      <div class="project-card project-card--1 fade-up" data-tilt>
+        <div class="project-card-bg-text">AI</div>
+        <div class="project-card-content">
+          <div class="project-card-emoji">✦</div>
+          <a href="#" target="_blank" class="project-card-link" data-toast="项目页面还在整理中">
+            <h3 class="project-card-title">野生内容生产者</h3>
+            <p class="project-card-desc">一个用来存放我各种半途而废项目的仓库。如果你发现一个半年没更新的页面，那很正常，我在酝酿（真的）。</p>
+            <span class="project-card-tag">个人主页 · 能不能等到看缘分</span>
+          </a>
+        </div>
+      </div>
+      <div class="project-card project-card--2 fade-up fade-up-delay-1" data-tilt>
+        <div class="project-card-bg-text">PJ</div>
+        <div class="project-card-content">
+          <div class="project-card-emoji">◈</div>
+          <a href="#" target="_blank" class="project-card-link" data-toast="项目页面还在整理中">
+            <h3 class="project-card-title">Bug展示大会</h3>
+            <p class="project-card-desc">每一个项目都伴随着至少100个commit和50个"WTF"。能跑就行，别问原理，问就是魔法 🫧</p>
+            <span class="project-card-tag">项目演示 · 祈祷别报错</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WORKS ==================== -->
+<section class="works" id="worksSection">
+  <div class="works-top">
+    <p class="section-label fade-up">Collections</p>
+    <h2 class="works-headline fade-up">一些我攒了很久的<br><em>数字囤积物</em></h2>
+  </div>
+  <div class="works-track" id="worksTrack">
+    <a href="#" target="_blank" class="work-card" data-toast="收藏夹还在整理中">
+      <div class="work-card-number">01</div>
+      <div class="work-card-title">灵感素材库</div>
+      <div class="work-card-platform">截图了但从来不看的 reference</div>
+    </a>
+    <a href="#" target="_blank" class="work-card" data-toast="收藏夹还在整理中">
+      <div class="work-card-number">02</div>
+      <div class="work-card-title">半成品博物馆</div>
+      <div class="work-card-platform">开了坑但不一定填的 projects</div>
+    </a>
+    <a href="#" target="_blank" class="work-card" data-toast="收藏夹还在整理中">
+      <div class="work-card-number">03</div>
+      <div class="work-card-title">收藏即学会</div>
+      <div class="work-card-platform">打开次数不超过3的学习资料</div>
+    </a>
+    <a href="#" target="_blank" class="work-card" data-toast="收藏夹还在整理中">
+      <div class="work-card-number">04</div>
+      <div class="work-card-title">生活边角料</div>
+      <div class="work-card-platform">一些不知道放哪的碎片</div>
+    </a>
+    <a href="#" target="_blank" class="work-card" data-toast="收藏夹还在整理中">
+      <div class="work-card-number">05</div>
+      <div class="work-card-title">待读清单</div>
+      <div class="work-card-platform">标了星但可能永远不会看的文章</div>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="contact" id="contactSection">
+  <div class="contact-inner">
+    <div class="contact-headline-wrap">
+      <span class="online-indicator" aria-label="在线" title="这个人现在可能正在写bug"></span>
+      <h2 class="contact-headline fade-up no-margin">来都来了</h2>
+    </div>
+    <p class="contact-sub fade-up">我不咬人，但我的AI可能会自动回复你 🤖</p>
+    <div class="contact-links fade-up">
+      <a href="#" class="contact-link" id="copyEmail" data-email="mapper0618@example.com">📮 发邮件（我可能会已读不回）</a>
+      <a href="#" class="contact-link" data-toast="社交账号还在整理中">💻 全网同名 @Maper0618（除了那个被人抢注的）</a>
+    </div>
+    <p class="contact-quote fade-up">"代码写得好，bug少不了。"<br>— 某位凌晨3点还在debug的 anonymous</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p id="footerSlogan">© 2026 Maper0618 · 用咖啡因和Ctrl+S搭建 · 如有bug，那是feature</p>
+</footer>
+
+</body>
+</html>
