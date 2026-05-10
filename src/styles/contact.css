@@ -1,0 +1,82 @@
+/* ============ CONTACT ============ */
+.contact {
+  background: #1a2332;
+  color: #fff;
+  padding: 8rem 2rem;
+  text-align: center;
+}
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-headline-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.contact-headline {
+  font-family: 'Huiwen Mincho', 'Noto Serif SC', serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+.contact-headline.no-margin {
+  margin-bottom: 0;
+}
+.contact-sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  opacity: 0.5;
+  margin-bottom: 3rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+.contact-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.7;
+  transition: all 0.3s;
+  position: relative;
+  padding-bottom: 4px;
+}
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: #F4D758;
+  transition: width 0.3s;
+}
+.contact-link:hover { opacity: 1; }
+.contact-link:hover::after { width: 100%; }
+
+.contact-quote {
+  font-weight: 300;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+  background: #1a2332;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem;
+  text-align: center;
+}
+.footer p {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.1em;
+}
+
